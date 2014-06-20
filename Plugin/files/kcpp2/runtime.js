@@ -81,6 +81,8 @@ cr.plugins_.kcpp2 = function(runtime)
             var p = array[i][0][0].split("|");
             this.kruskal.addPoint(parseInt(p[0]), parseInt(p[1]));
         }
+        this.kruskal.calcRoutes();
+        this.kruskal.exec();
 	};
 	
 	
@@ -95,6 +97,9 @@ cr.plugins_.kcpp2 = function(runtime)
 	//////////////////////////////////////
 	// Expressions
 	function Exps() {};
+	Exps.prototype.Distance = function(ret){
+		ret.set_int(this.kruskal.distance());
+	}
 	pluginProto.exps = new Exps();
 
 }());

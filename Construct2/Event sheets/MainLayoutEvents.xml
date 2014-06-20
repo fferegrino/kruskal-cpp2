@@ -153,6 +153,12 @@
                         <action id="0" name="Exec kruskal" sid="188108704053223" type="kruskal">
                             <param id="0" name="Array">trees</param>
                         </action>
+                        <action id="0" name="Set text" sid="5789783692069566" type="distanceText">
+                            <param id="0" name="Text">&quot;Distance &quot; &amp;kruskal.Distance</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="7503621585526344" type="distanceText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

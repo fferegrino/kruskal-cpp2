@@ -12,10 +12,11 @@ namespace KruskalRT
 		void AddPoint(int x, int y);
 		void CalcRoutes();
 		void Exec();
+		int Distance();
 	private:
 		void Join(Route r);
-		int distance;
 		int Root(int son);
+		int distance;
 		int i;
 		int _size;
 		int * p;

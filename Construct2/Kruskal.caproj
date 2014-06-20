@@ -135,6 +135,9 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="distanceText" sid="8929987945403073">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -150,11 +153,7 @@
             </properties>
         </global-instance>
         <global-instance type="functions" uid="8" />
-        <global-instance type="kruskal" uid="10">
-            <properties>
-                <my-property>77</my-property>
-            </properties>
-        </global-instance>
+        <global-instance type="kruskal" uid="10" />
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

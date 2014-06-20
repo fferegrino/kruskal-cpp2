@@ -43,7 +43,7 @@ AddNumberParam("Maximum trees", "Maximum bumber of trees");
 AddAction(1, af_none, "Create kruskal", "Kruskal", "Create Kruskal", "Create kruskal", "CreateKruskal");
 ////////////////////////////////////////
 // Expressions
-
+AddExpression(0, ef_return_number, "MST distance", "Kruskal", "Distance", "The total distance of the MST");
 ////////////////////////////////////////
 ACESDone();
 

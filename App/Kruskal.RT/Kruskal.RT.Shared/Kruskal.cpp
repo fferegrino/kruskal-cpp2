@@ -38,11 +38,11 @@ void Kruskal::Exec(){
 	for (int k = 0; k < routes.size(); k++){
 		Join(routes[k]);
 	}
-	if (10 == distance){
-		distance = 0;
-	}
 }
 
+int Kruskal::Distance(){
+	return distance;
+}
 
 void Kruskal::Join(Route r){
 	int aa = Root(r.a);
