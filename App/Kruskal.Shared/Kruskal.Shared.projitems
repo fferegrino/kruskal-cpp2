@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>7550B1FF-BCCF-465D-AFF7-E31BAF616288</SharedGUID>
+  </PropertyGroup>
+  <ItemGroup>
+	<Content Include="$(MSBuildThisFileDirectory)c2runtime.js" />
+	<Content Include="$(MSBuildThisFileDirectory)jquery-2.0.0.min.js" />
+	<Content Include="$(MSBuildThisFileDirectory)images\assetsC2\background.png" />
+	<Content Include="$(MSBuildThisFileDirectory)images\assetsC2\tree-sheet0.png" />
+	<Content Include="$(MSBuildThisFileDirectory)images\assetsC2\deletebutton-sheet0.png" />
+	<Content Include="$(MSBuildThisFileDirectory)images\assetsC2\addbutton-sheet0.png" />
+	<Content Include="$(MSBuildThisFileDirectory)images\assetsC2\playbutton-sheet0.png" />
+	<Content Include="$(MSBuildThisFileDirectory)icon-16.png" />
+	<Content Include="$(MSBuildThisFileDirectory)icon-32.png" />
+	<Content Include="$(MSBuildThisFileDirectory)icon-114.png" />
+	<Content Include="$(MSBuildThisFileDirectory)icon-128.png" />
+	<Content Include="$(MSBuildThisFileDirectory)icon-256.png" />
+	<Content Include="$(MSBuildThisFileDirectory)loading-logo.png" />
+
+  </ItemGroup>
+</Project>
