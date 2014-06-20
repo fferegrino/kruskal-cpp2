@@ -1,48 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-
-  <Identity Name="2EC2C3BB-8D4C-493D-A837-CBDE9883E1CD" Version="1.0.0.0" />
-
+  <Identity Name="2EC2C3BB-8D4C-493D-A837-CBDE9883E1CD" Version="1.0.0.0" Publisher="CN=fferegrino" />
   <Properties>
     <DisplayName>Kruskal</DisplayName>
-	<Description>A simple app that shows the power of C++ and Construct 2</Description>
+    <Description>A simple app that shows the power of C++ and Construct 2</Description>
     <PublisherDisplayName>Antonio Feregrino</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.0</OSMinVersion>
     <OSMaxVersionTested>6.3.0</OSMaxVersionTested>
   </Prerequisites>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application 
-      Id="App"
-      StartPage="index-win.html">
-
-      <m2:VisualElements
-        DisplayName="Kruskal"
-        Description="A simple app that shows the power of C++ and Construct 2"
-        ForegroundText="light"
-        BackgroundColor="#464646"
-        Square150x150Logo="images\Logo.png"
-        Square30x30Logo="images\SmallLogo.png">
-
+    <Application Id="App" StartPage="index-win.html">
+      <m2:VisualElements DisplayName="Kruskal" Description="A simple app that shows the power of C++ and Construct 2" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
         <m2:SplashScreen Image="images\splashscreen.png" />
-		
-		
-
       </m2:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
-
   </Capabilities>
-
 </Package>

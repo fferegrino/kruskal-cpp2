@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="&lt;your name/organisation&gt;" id="kcpp2" version="1">kruskal-cpp2</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -127,6 +128,13 @@
         <object-type global="1" name="trees" sid="7329623637515352">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="kruskal" sid="8912108642719349">
+            <plugin id="kcpp2" />
+        </object-type>
+        <object-type name="TiledBackground" sid="4224017286896294">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
@@ -142,6 +150,11 @@
             </properties>
         </global-instance>
         <global-instance type="functions" uid="8" />
+        <global-instance type="kruskal" uid="10">
+            <properties>
+                <my-property>77</my-property>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder expanded="1" />
     <music-folder expanded="1" />

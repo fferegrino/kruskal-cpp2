@@ -35,10 +35,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
+                        <x>120</x>
                         <y>0</y>
                         <z>0</z>
-                        <width>1366</width>
+                        <width>1246</width>
                         <height>768</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -119,6 +119,26 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="TiledBackground" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>120</width>
+                        <height>768</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="addButton" uid="5">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -129,8 +149,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>708</y>
+                        <x>60</x>
+                        <y>608</y>
                         <z>0</z>
                         <width>80</width>
                         <height>80</height>
@@ -178,10 +198,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>15</x>
+                        <x>140</x>
                         <y>15</y>
                         <z>0</z>
-                        <width>1336</width>
+                        <width>1206</width>
                         <height>80</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -201,7 +221,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>60</x>
-                        <y>620</y>
+                        <y>508</y>
                         <z>0</z>
                         <width>48</width>
                         <height>48</height>
@@ -227,7 +247,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>220</x>
+                        <x>140</x>
                         <y>675</y>
                         <z>0</z>
                         <width>648</width>

@@ -13,6 +13,7 @@
     <Content Include="$(MSBuildThisFileDirectory)images\assetsC2\deletebutton-sheet0.png" />
     <Content Include="$(MSBuildThisFileDirectory)images\assetsC2\addbutton-sheet0.png" />
     <Content Include="$(MSBuildThisFileDirectory)images\assetsC2\playbutton-sheet0.png" />
+	<Content Include="$(MSBuildThisFileDirectory)images\assetsC2\tiledbackground.png" />
     <Content Include="$(MSBuildThisFileDirectory)icon-16.png" />
     <Content Include="$(MSBuildThisFileDirectory)icon-32.png" />
     <Content Include="$(MSBuildThisFileDirectory)icon-114.png" />

@@ -14,14 +14,18 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)Class1.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Kruskal.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Point.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)pch.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)Route.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(MSBuildThisFileDirectory)Class1.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Kruskal.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)Point.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)Route.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectCapability Include="SourceItemsFromImports" />
