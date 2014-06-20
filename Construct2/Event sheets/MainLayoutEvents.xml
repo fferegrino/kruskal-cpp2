@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainLayoutEvents</name>
+    <events>
+        <variable comment="Variable to know if we are adding or deleting trees" constant="0" name="adding" sid="9914502085655847" static="0" type="number">1</variable>
+        <variable constant="0" name="TREES" sid="2274322332376631" static="0" type="number">10</variable>
+        <event-block collapsed="1" sid="3126525493309676">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="8845285379828246" type="touch" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3822723179534906">
+                    <conditions>
+                        <condition id="4" name="Is touching object" sid="1591384978466657" type="touch">
+                            <param id="0" name="Object">addButton</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="5037590507981224">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="6434086960740643" type="System" />
+                        <condition id="-14" name="Compare variable" sid="5925344833052395" type="System">
+                            <param id="0" name="Variable">adding</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6547858309621138" type="System">
+                            <param id="0" name="Variable">TREES</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7670295734865035" type="System">
+                            <param id="0" name="Object to create">tree</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">touch.AbsoluteX</param>
+                            <param id="3" name="Y">touch.AbsoluteY</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="1563052441898304" type="System">
+                            <param id="0" name="Variable">TREES</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4049771589565771" type="functions">
+                            <param id="0" name="Name">&quot;hud&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8062167795163252">
+            <conditions>
+                <condition id="3" name="On touched object" sid="2826318722354305" type="touch">
+                    <param id="0" name="Object">tree</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="8635737636796754" type="System">
+                    <param id="0" name="Variable">adding</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="3728748175453289" type="tree" />
+                <action id="-10" name="Add to" sid="105343347202288" type="System">
+                    <param id="0" name="Variable">TREES</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="2049456331350102" type="functions">
+                    <param id="0" name="Name">&quot;hud&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5150115570679509">
+            <conditions>
+                <condition id="3" name="On touched object" sid="603632634400864" type="touch">
+                    <param id="0" name="Object">addButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3967893212643514" type="System">
+                    <param id="0" name="Variable">adding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8734721940821903" type="actionText">
+                    <param id="0" name="Text">&quot;Tap anywhere to put a tree&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8268074910920721">
+            <conditions>
+                <condition id="3" name="On touched object" sid="5027349124339629" type="touch">
+                    <param id="0" name="Object">deleteButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="7512978081866703" type="System">
+                    <param id="0" name="Variable">adding</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="5403582042800348" type="actionText">
+                    <param id="0" name="Text">&quot;Tap on a tree to erase it&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9377516213355794">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8368476818699291" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2095163546735417" type="actionText">
+                    <param id="0" name="Text">&quot;Tap anywhere to put a tree&quot;</param>
+                </action>
+                <action id="-9" name="Destroy" sid="1134134457772988" type="tree" />
+                <action id="0" name="Call function" sid="155402750260652" type="functions">
+                    <param id="0" name="Name">&quot;hud&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3252892565107575">
+            <conditions>
+                <condition id="0" name="On function" sid="5270113005414458" type="functions">
+                    <param id="0" name="Name">&quot;hud&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8552996681409072" type="remainingText">
+                    <param id="0" name="Text">TREES &amp; &quot; trees remaining&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7718001892478434">
+            <conditions>
+                <condition id="3" name="On touched object" sid="4438827171196604" type="touch">
+                    <param id="0" name="Object">playButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Clear" sid="972757589400343" type="trees" />
+            </actions>
+            <sub-events>
+                <event-block sid="3816186439396725">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="6222398548413355" type="System">
+                            <param id="0" name="Object">tree</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="9058964774604582" type="trees">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">tree.X&amp;&quot;|&quot;&amp;tree.Y</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
