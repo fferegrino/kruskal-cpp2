@@ -131,8 +131,10 @@
             </conditions>
             <actions>
                 <action id="0" name="Clear" sid="972757589400343" type="trees" />
+                <action id="2" name="Clear kruskal" sid="6638243614871366" type="kruskal" />
             </actions>
             <sub-events>
+                <variable constant="0" name="wayNumber" sid="6656823368323858" static="0" type="number">0</variable>
                 <event-block sid="3816186439396725">
                     <conditions>
                         <condition id="-11" name="For Each" sid="6222398548413355" type="System">
@@ -153,13 +155,38 @@
                         <action id="0" name="Exec kruskal" sid="188108704053223" type="kruskal">
                             <param id="0" name="Array">trees</param>
                         </action>
-                        <action id="0" name="Set text" sid="5789783692069566" type="distanceText">
-                            <param id="0" name="Text">&quot;Distance &quot; &amp;kruskal.Distance</param>
+                        <action id="-9" name="Set value" sid="9393280174411645" type="System">
+                            <param id="0" name="Variable">wayNumber</param>
+                            <param id="1" name="Value">kruskal.Coordinates</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="7503621585526344" type="distanceText">
+                        <action id="0" name="Set text" sid="7503621585526344" type="distanceText">
+                            <param id="0" name="Text">&quot;Distance &quot; &amp; kruskal.Distance</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9830861721537239" type="distanceText">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="8708780786746988">
+                            <conditions>
+                                <condition id="-23" name="While" sid="8602360799680207" type="System" />
+                                <condition id="-14" name="Compare variable" sid="1077364474634761" type="System">
+                                    <param id="0" name="Variable">wayNumber</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Append text" sid="7516133722502355" type="distanceText">
+                                    <param id="0" name="Text">newline &amp; kruskal.NextCoordinate</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="2404123774145041" type="System">
+                                    <param id="0" name="Variable">wayNumber</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

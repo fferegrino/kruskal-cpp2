@@ -12,15 +12,20 @@ namespace KruskalRT
 		void AddPoint(int x, int y);
 		void CalcRoutes();
 		void Exec();
+		Platform::String^ NextCoordinate();
 		int Distance();
+		int RealRoutes();
+		void Clear();
 	private:
 		void Join(Route r);
 		int Root(int son);
 		int distance;
 		int i;
+		int iii;
 		int _size;
 		int * p;
 		std::vector < Route > routes;
+		std::vector < Route > realroutes;
 		Point * points;
 	};
 }

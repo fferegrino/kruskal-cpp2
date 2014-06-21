@@ -84,14 +84,14 @@ cr.plugins_.kcpp2 = function(runtime)
         this.kruskal.calcRoutes();
         this.kruskal.exec();
 	};
-	
-	
 	Acts.prototype.CreateKruskal = function(size_)
 	{
 		this.kruskal = new KruskalRT.Kruskal(size_);
 	};
-	// ... other actions here ...
-	
+	Acts.prototype.ClearKruskal = function(size_)
+	{
+		this.kruskal.clear();
+	};
 	pluginProto.acts = new Acts();
 	
 	//////////////////////////////////////
@@ -99,6 +99,12 @@ cr.plugins_.kcpp2 = function(runtime)
 	function Exps() {};
 	Exps.prototype.Distance = function(ret){
 		ret.set_int(this.kruskal.distance());
+	}
+	Exps.prototype.NextCoordinate = function(ret){
+		ret.set_string(this.kruskal.nextCoordinate());
+	}
+	Exps.prototype.Coordinates= function(ret){ 
+		ret.set_int(this.kruskal.realRoutes());
 	}
 	pluginProto.exps = new Exps();
 

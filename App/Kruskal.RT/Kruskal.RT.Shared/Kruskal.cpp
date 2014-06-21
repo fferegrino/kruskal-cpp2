@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Kruskal.h"
 #include <algorithm>
+#include <string>
 
 using namespace KruskalRT;
 using namespace Platform;
@@ -35,13 +36,48 @@ void Kruskal::CalcRoutes(){
 
 void Kruskal::Exec(){
 	std::sort(routes.begin(), routes.end());
-	for (int k = 0; k < routes.size(); k++){
+	for (int k = 0; k < (int)routes.size(); k++){
 		Join(routes[k]);
 	}
 }
 
 int Kruskal::Distance(){
 	return distance;
+}
+int Kruskal::RealRoutes(){
+	return realroutes.size();
+}
+
+Platform::String^ Kruskal::NextCoordinate(){
+	String^ s = L"INVALID";
+	if (iii < (int)realroutes.size()){
+		char16 val[20];
+
+		// Convert to a wchar_t*
+		char *orig = "%d %d to %d %d";
+		size_t origsize = strlen(orig) + 1;
+		const size_t newsize = 100;
+		size_t convertedChars = 0;
+		wchar_t wcstring[newsize];
+		mbstowcs_s(&convertedChars, wcstring, origsize, orig, _TRUNCATE);
+
+		swprintf_s<20>(val, wcstring
+			, points[realroutes[iii].a].X(), points[realroutes[iii].a].Y()
+			, points[realroutes[iii].b].X(), points[realroutes[iii].b].Y());
+		s = ref new String(val);
+		iii++;
+		return s;
+	}
+	return s;
+}
+
+void Kruskal::Clear(){
+	routes.clear();
+	realroutes.clear();
+	for (int ix = 0; ix < _size; ix++) p[ix] = ix;
+	i = 0;
+	iii = 0;
+	distance = 0;
 }
 
 void Kruskal::Join(Route r){
@@ -50,6 +86,7 @@ void Kruskal::Join(Route r){
 	if (aa != bb){
 		p[aa] = p[bb];
 		distance += r.d;
+		realroutes.push_back(r);
 	}
 }
 

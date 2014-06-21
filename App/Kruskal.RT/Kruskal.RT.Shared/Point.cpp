@@ -18,3 +18,11 @@ void Point::Set(int i, int x, int y)
 int Point::Distance(Point p){
 	return sqrt(((_x - p._x) * (_x - p._x)) + ((_y - p._y)*(_y - p._y)));
 }
+
+int Point::X(){
+	return _x;
+
+}
+int Point::Y(){
+	return _y;
+}

@@ -16568,10 +16568,20 @@ cr.plugins_.kcpp2 = function(runtime)
 	{
 		this.kruskal = new KruskalRT.Kruskal(size_);
 	};
+	Acts.prototype.ClearKruskal = function(size_)
+	{
+		this.kruskal.clear();
+	};
 	pluginProto.acts = new Acts();
 	function Exps() {};
 	Exps.prototype.Distance = function(ret){
 		ret.set_int(this.kruskal.distance());
+	}
+	Exps.prototype.NextCoordinate = function(ret){
+		ret.set_string(this.kruskal.nextCoordinate());
+	}
+	Exps.prototype.Coordinates= function(ret){
+		ret.set_int(this.kruskal.realRoutes());
 	}
 	pluginProto.exps = new Exps();
 }());
@@ -16616,18 +16626,6 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
-		cr.plugins_.Text,
-		false,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		false
-	]
-,	[
 		cr.plugins_.TiledBg,
 		false,
 		true,
@@ -16640,15 +16638,15 @@ cr.getProjectModel = function() { return [
 		true
 	]
 ,	[
-		cr.plugins_.Touch,
+		cr.plugins_.Text,
+		false,
 		true,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
-		false,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
 		false
 	]
 ,	[
@@ -16661,6 +16659,18 @@ cr.getProjectModel = function() { return [
 		true,
 		true,
 		true,
+		false
+	]
+,	[
+		cr.plugins_.Touch,
+		true,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
+		false,
 		false
 	]
 	],
@@ -17149,7 +17159,7 @@ cr.getProjectModel = function() { return [
 				]
 			]
 ,			[
-				[690, 675, 0, 648, 80, 0, 0, 1, 0, 0, 0, 0, []],
+				[140, 98, 0, 261, 572, 0, 0, 1, 0, 0, 0, 0, []],
 				12,
 				12,
 				[
@@ -17159,9 +17169,9 @@ cr.getProjectModel = function() { return [
 				[
 					"Text",
 					1,
-					"36pt Segoe UI Light",
+					"18pt Segoe UI Light",
 					"rgb(255,255,255)",
-					2,
+					0,
 					0,
 					0,
 					0,
@@ -17769,9 +17779,23 @@ false,false,2274322332376631,false
 				972757589400343,
 				false
 			]
+,			[
+				10,
+				cr.plugins_.kcpp2.prototype.acts.ClearKruskal,
+				null,
+				6638243614871366,
+				false
+			]
 			]
 			,[
 			[
+				1,
+				"wayNumber",
+				0,
+				0,
+false,false,6656823368323858,false
+			]
+,			[
 				0,
 				null,
 				false,
@@ -17866,10 +17890,33 @@ false,false,2274322332376631,false
 					]
 				]
 ,				[
+					-1,
+					cr.system_object.prototype.acts.SetVar,
+					null,
+					9393280174411645,
+					false
+					,[
+					[
+						11,
+						"wayNumber"
+					]
+,					[
+						7,
+						[
+							20,
+							10,
+							cr.plugins_.kcpp2.prototype.exps.Coordinates,
+							true,
+							null
+						]
+					]
+					]
+				]
+,				[
 					12,
 					cr.plugins_.Text.prototype.acts.SetText,
 					null,
-					5789783692069566,
+					7503621585526344,
 					false
 					,[
 					[
@@ -17895,12 +17942,110 @@ false,false,2274322332376631,false
 					12,
 					cr.plugins_.Text.prototype.acts.SetVisible,
 					null,
-					7503621585526344,
+					9830861721537239,
 					false
 					,[
 					[
 						3,
 						1
+					]
+					]
+				]
+				]
+				,[
+				[
+					0,
+					null,
+					false,
+					null,
+					8708780786746988,
+					[
+					[
+						-1,
+						cr.system_object.prototype.cnds.While,
+						null,
+						0,
+						true,
+						false,
+						false,
+						8602360799680207,
+						false
+					]
+,					[
+						-1,
+						cr.system_object.prototype.cnds.CompareVar,
+						null,
+						0,
+						false,
+						false,
+						false,
+						1077364474634761,
+						false
+						,[
+						[
+							11,
+							"wayNumber"
+						]
+,						[
+							8,
+							4
+						]
+,						[
+							7,
+							[
+								0,
+								0
+							]
+						]
+						]
+					]
+					],
+					[
+					[
+						12,
+						cr.plugins_.Text.prototype.acts.AppendText,
+						null,
+						7516133722502355,
+						false
+						,[
+						[
+							7,
+							[
+								10,
+								[
+									19,
+									cr.system_object.prototype.exps.newline
+								]
+								,[
+									20,
+									10,
+									cr.plugins_.kcpp2.prototype.exps.NextCoordinate,
+									true,
+									null
+								]
+							]
+						]
+						]
+					]
+,					[
+						-1,
+						cr.system_object.prototype.acts.SubVar,
+						null,
+						2404123774145041,
+						false
+						,[
+						[
+							11,
+							"wayNumber"
+						]
+,						[
+							7,
+							[
+								0,
+								1
+							]
+						]
+						]
 					]
 					]
 				]

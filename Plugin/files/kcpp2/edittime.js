@@ -40,10 +40,13 @@
 AddObjectParam("Array", "Array :D")									// a button to click and pick an object type
 AddAction(0, af_none, "Exec kruskal", "Kruskal", "Alert {0}", "Description for my action!", "ExecKruskal");
 AddNumberParam("Maximum trees", "Maximum bumber of trees");
-AddAction(1, af_none, "Create kruskal", "Kruskal", "Create Kruskal", "Create kruskal", "CreateKruskal");
+AddAction(1, af_none, "Create kruskal", "Kruskal", "Create kruskal", "Create kruskal", "CreateKruskal");
+AddAction(2, af_none, "Clear kruskal", "Kruskal", "Clear kruskal", "Clear kruskal", "ClearKruskal")
 ////////////////////////////////////////
 // Expressions
 AddExpression(0, ef_return_number, "MST distance", "Kruskal", "Distance", "The total distance of the MST");
+AddExpression(1, ef_return_string, "Next coordinate", "Kruskal", "NextCoordinate", "The next coordinate of the MST");
+AddExpression(2, ef_return_string, "Number of coordinates", "Kruskal", "Coordinates", "The number of coordinates that form the MST");
 ////////////////////////////////////////
 ACESDone();
 

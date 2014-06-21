@@ -263,9 +263,9 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Segoe UI Light,-48,300,0</font>
+                        <font>Segoe UI Light,-24,300,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
+                        <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -274,11 +274,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>690</x>
-                        <y>675</y>
+                        <x>140</x>
+                        <y>98</y>
                         <z>0</z>
-                        <width>648</width>
-                        <height>80</height>
+                        <width>261</width>
+                        <height>572</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
