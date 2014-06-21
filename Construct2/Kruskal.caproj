@@ -50,6 +50,10 @@
         </object-type>
         <object-type name="tree" sid="5816345712799605">
             <plugin id="Sprite" />
+            <container>
+                <type>tree</type>
+                <type>coordinatesText</type>
+            </container>
             <animation-folder expanded="1">
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1872814328157871" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -137,6 +141,13 @@
         </object-type>
         <object-type name="distanceText" sid="8929987945403073">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="coordinatesText" sid="8857344078753821">
+            <plugin id="Text" />
+            <container>
+                <type>tree</type>
+                <type>coordinatesText</type>
+            </container>
         </object-type>
     </object-folder>
     <families />

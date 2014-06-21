@@ -36,6 +36,9 @@
                     <param id="0" name="Name">&quot;hud&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
                 </action>
+                <action id="0" name="Set text" sid="1426378828383442" type="coordinatesText">
+                    <param id="0" name="Text">touch.AbsoluteX &amp; &quot;,&quot; &amp; touch.AbsoluteY</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="8062167795163252">

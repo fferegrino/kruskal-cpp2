@@ -16626,7 +16626,7 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
-		cr.plugins_.TiledBg,
+		cr.plugins_.Sprite,
 		false,
 		true,
 		true,
@@ -16635,7 +16635,7 @@ cr.getProjectModel = function() { return [
 		true,
 		true,
 		true,
-		true
+		false
 	]
 ,	[
 		cr.plugins_.Text,
@@ -16650,7 +16650,7 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
-		cr.plugins_.Sprite,
+		cr.plugins_.TiledBg,
 		false,
 		true,
 		true,
@@ -16659,7 +16659,7 @@ cr.getProjectModel = function() { return [
 		true,
 		true,
 		true,
-		false
+		true
 	]
 ,	[
 		cr.plugins_.Touch,
@@ -16951,6 +16951,23 @@ cr.getProjectModel = function() { return [
 		[],
 		null
 	]
+,	[
+		"t13",
+		cr.plugins_.Text,
+		false,
+		[],
+		0,
+		0,
+		null,
+		null,
+		[
+		],
+		false,
+		false,
+		8857344078753821,
+		[],
+		null
+	]
 	],
 	[
 	],
@@ -17040,6 +17057,26 @@ cr.getProjectModel = function() { return [
 					"Default",
 					0,
 					1
+				]
+			]
+,			[
+				[594, -30, 0, 139, 45, 0, 0, 1, 0, 0, 0, 0, []],
+				13,
+				13,
+				[
+				],
+				[
+				],
+				[
+					"Text",
+					0,
+					"18pt Segoe UI Light",
+					"rgb(255,255,255)",
+					1,
+					0,
+					0,
+					0,
+					0
 				]
 			]
 			],
@@ -17377,6 +17414,42 @@ false,false,2274322332376631,false
 				]
 ,				[
 					13,
+				]
+				]
+			]
+,			[
+				13,
+				cr.plugins_.Text.prototype.acts.SetText,
+				null,
+				1426378828383442,
+				false
+				,[
+				[
+					7,
+					[
+						10,
+						[
+							10,
+							[
+								20,
+								2,
+								cr.plugins_.Touch.prototype.exps.AbsoluteX,
+								false,
+								null
+							]
+							,[
+								2,
+								","
+							]
+						]
+						,[
+							20,
+							2,
+							cr.plugins_.Touch.prototype.exps.AbsoluteY,
+							false,
+							null
+						]
+					]
 				]
 				]
 			]
@@ -18069,10 +18142,11 @@ false,false,6656823368323858,false
 	false,
 	0,
 	0,
-	13,
+	14,
 	false,
 	true,
 	1,
 	[
+		[13,1]
 	]
 ];};
