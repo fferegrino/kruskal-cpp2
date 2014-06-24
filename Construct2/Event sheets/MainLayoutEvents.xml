@@ -133,10 +133,25 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Clear" sid="972757589400343" type="trees" />
                 <action id="2" name="Clear kruskal" sid="6638243614871366" type="kruskal" />
             </actions>
             <sub-events>
+                <event-block sid="8675416049587205">
+                    <conditions>
+                        <condition id="-23" name="While" sid="1926406601383873" type="System" />
+                        <condition id="7" name="Compare size" sid="4223759824913712" type="trees">
+                            <param id="0" name="Axis">0</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Pop" sid="3934890083418564" type="trees">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <variable constant="0" name="wayNumber" sid="6656823368323858" static="0" type="number">0</variable>
                 <event-block sid="3816186439396725">
                     <conditions>

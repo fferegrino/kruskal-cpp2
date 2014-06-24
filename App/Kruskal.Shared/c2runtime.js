@@ -16557,7 +16557,7 @@ cr.plugins_.kcpp2 = function(runtime)
 	{
 		var array  = array_["instances"][0]["arr"];
 		var len =  array["length"];
-        for (var i = 10; i < len; i++) {
+        for (var i = 0; i < len; i++) {
             var p = array[i][0][0].split("|");
             this.kruskal.addPoint(parseInt(p[0]), parseInt(p[1]));
 		}
@@ -16650,18 +16650,6 @@ cr.getProjectModel = function() { return [
 		false
 	]
 ,	[
-		cr.plugins_.TiledBg,
-		false,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true,
-		true
-	]
-,	[
 		cr.plugins_.Touch,
 		true,
 		false,
@@ -16672,6 +16660,18 @@ cr.getProjectModel = function() { return [
 		false,
 		false,
 		false
+	]
+,	[
+		cr.plugins_.TiledBg,
+		false,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true,
+		true
 	]
 	],
 	[
@@ -17229,7 +17229,7 @@ cr.getProjectModel = function() { return [
 				[
 				],
 				[
-					10,
+					0,
 					1,
 					1
 				]
@@ -17846,13 +17846,6 @@ false,false,2274322332376631,false
 			],
 			[
 			[
-				9,
-				cr.plugins_.Arr.prototype.acts.Clear,
-				null,
-				972757589400343,
-				false
-			]
-,			[
 				10,
 				cr.plugins_.kcpp2.prototype.acts.ClearKruskal,
 				null,
@@ -17862,6 +17855,73 @@ false,false,2274322332376631,false
 			]
 			,[
 			[
+				0,
+				null,
+				false,
+				null,
+				8675416049587205,
+				[
+				[
+					-1,
+					cr.system_object.prototype.cnds.While,
+					null,
+					0,
+					true,
+					false,
+					false,
+					1926406601383873,
+					false
+				]
+,				[
+					9,
+					cr.plugins_.Arr.prototype.cnds.CompareSize,
+					null,
+					0,
+					false,
+					false,
+					false,
+					4223759824913712,
+					false
+					,[
+					[
+						3,
+						0
+					]
+,					[
+						8,
+						4
+					]
+,					[
+						0,
+						[
+							0,
+							0
+						]
+					]
+					]
+				]
+				],
+				[
+				[
+					9,
+					cr.plugins_.Arr.prototype.acts.Pop,
+					null,
+					3934890083418564,
+					false
+					,[
+					[
+						3,
+						0
+					]
+,					[
+						3,
+						0
+					]
+					]
+				]
+				]
+			]
+,			[
 				1,
 				"wayNumber",
 				0,
@@ -18147,6 +18207,6 @@ false,false,6656823368323858,false
 	true,
 	1,
 	[
-		[13,1]
+		[1,13]
 	]
 ];};
